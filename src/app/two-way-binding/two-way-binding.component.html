@@ -1,0 +1,25 @@
+<div class="card">
+  <h1>Two-way Binding</h1>
+  <input [(ngModel)]="name" type="text">
+  <p>Your name is: {{ name }}</p>
+  <br>
+  <input id="newText" [(ngModel)]="text" name="newText">
+  <p>You entered: {{ text }}</p>
+  <br>
+  <button (click)="onButtonClick()">Change name to Bob</button>
+  <br>
+  <br>
+  <p [style.color]="color">What's your favorite color?</p> <!-- dynamically style text with specified color -->
+  <input [(ngModel)]="color" type="text" placeholder="Enter color here"> <!-- new input field for color -->
+  <p>Select a greeting:</p>
+  <label>
+    <input type="radio" name="greeting" value="Hello" [(ngModel)]="selectedGreeting"> Hello
+  </label>
+  <label>
+    <input type="radio" name="greeting" value="Hi" [(ngModel)]="selectedGreeting"> Hi
+  </label>
+  <label>
+    <input type="radio" name="greeting" value="Hey" [(ngModel)]="selectedGreeting"> Hey
+  </label>
+  <p [style.color]="color">You selected: {{selectedGreeting}} {{name}}</p>
+</div>
